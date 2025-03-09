@@ -1,4 +1,5 @@
 # web-game
 проект 
-как база был взят репозиторий
+
+База была взята с репозитория
 ``` https://github.com/Pixabay/jQuery-snapPuzzle ```
