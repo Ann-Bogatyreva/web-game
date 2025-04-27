@@ -56,6 +56,35 @@ font-size: 40px;
     cursor: not-allowed;
 }    
 </style>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Уровни</title>
+</head>
+
+<body>
+
+    <h1 class="hcolor"> Выбери уровень</h1>
+
+    <form action="http://localhost//jQuery-snapPuzzle-master/play.php" method = "GET"> 
+        <input class="btn" type="submit" value = "Уровень 1"> 
+        <input type="hidden" name="level" value = "cube.jpg">
+    </form>
+    
+    <form action="http://localhost//jQuery-snapPuzzle-master/play.php" method = "GET"> 
+        <input class="btn" type="submit" value = "Уровень 2"> 
+        <input type="hidden" name="level" value = "apple.jpg">
+    </form>
+    
+    <form action="http://localhost//jQuery-snapPuzzle-master/play.php" method = "GET"> 
+        <input class="btn" type="submit" value = "Уровень 3"> 
+        <input type="hidden" name="level" value = "kot.jpg">
+    </form>
+    
+    <form action="http://localhost//jQuery-snapPuzzle-master/play.php" method = "GET"> 
+        <input class="btn" type="submit" value = "Уровень 4"> 
+        <input type="hidden" name="level" value = "ball.jpg">
+    </form>
     
 </body>
 </html>
