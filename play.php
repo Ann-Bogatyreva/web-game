@@ -17,6 +17,9 @@
      { 
 
         if($_REQUEST["level"]=="cube.jpg") echo  '<div style="font-size:4.25em;color:#FFFFFF">Собери кубик</div>' ;
+        if($_REQUEST["level"]=="apple.jpg") echo '<div style="font-size:4.25em;color:#FFFFFF">Собери яблоко</div>';
+        if($_REQUEST["level"]=="kot.jpg") echo  '<div style="font-size:4.25em;color:#FFFFFF">Собери котиков</div>'; 
+        if($_REQUEST["level"]=="ball.jpg") echo  '<div style="font-size:4.25em;color:#FFFFFF">Собери мяч</div>';
         if($_REQUEST["level"]=="igolka.jpg") echo  '<div style="font-size:4.25em;color:#FFFFFF">Собери иголку с ниткой</div>';
 
         $imgplay = $_REQUEST["level"];
