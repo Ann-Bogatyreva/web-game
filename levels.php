@@ -41,7 +41,20 @@ font-size: 40px;
     border: 1px solid #4c51f9;
     outline: none;
 }
+.btn:hover {
+    transition: all 0.2s;
+    box-shadow: 0 7px 14px rgb(65 132 144 / 50%), 0 3px 6px rgb(0 0 0 / 10%);
+}
     
+.btn:active {
+    background-color: #FFFFFF;
+}
+.btn:disabled {
+    background-color: #eee;
+    border-color: #eee;
+    color: #444;
+    cursor: not-allowed;
+}    
 </style>
     
 </body>
