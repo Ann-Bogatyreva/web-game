@@ -86,5 +86,34 @@ font-size: 40px;
         <input type="hidden" name="level" value = "ball.jpg">
     </form>
     
+    <form action="http://localhost//jQuery-snapPuzzle-master/play.php" method = "GET"> 
+        <input class="btn" type="submit" value = "Уровень 5"> 
+        <input type="hidden" name="level" value = "map.jpg">
+    </form>
+    
+    <form action="http://localhost//jQuery-snapPuzzle-master/play.php" method = "GET"> 
+        <input class="btn" type="submit" value = "Уровень 6"> 
+        <input type="hidden" name="level" value = "sword.jpg">
+    </form>
+    
+    <form action="http://localhost//jQuery-snapPuzzle-master/play.php" method = "GET"> 
+        <input class="btn" type="submit" value = "Уровень 7"> 
+        <input type="hidden" name="level" value = "flowers.jpg">
+    </form>
+    
+    <form action="http://localhost//jQuery-snapPuzzle-master/play.php" method = "GET"> 
+        <input class="btn" type="submit" value = "Уровень 8"> 
+        <input type="hidden" name="level" value = "car.jpg">
+    </form>
+    
+    <form action="http://localhost//jQuery-snapPuzzle-master/play.php" method = "GET"> 
+        <input class="btn" type="submit" value = "Уровень 9"> 
+        <input type="hidden" name="level" value = "tower.jpg">
+    </form>
+    
+    <form action="http://localhost//jQuery-snapPuzzle-master/play.php" method = "GET"> 
+        <input class="btn" type="submit" value = "Уровень 10"> 
+        <input type="hidden" name="level" value = "igolka.jpg">
+    </form>
 </body>
 </html>
