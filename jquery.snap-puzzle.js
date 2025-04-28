@@ -25,5 +25,13 @@ o = that.data('options'),
                     pieceHeight = that.height() / o.rows,
                     pile = $(o.pile),
                     maxX = pile.width() - pieceWidth,
+maxY = pile.height() - pieceHeight,
 
+                    puzzle_offset = that.closest('span').offset(),
+
+                    pile_offset = pile.offset();
+
+
+
+                if (options
 			
