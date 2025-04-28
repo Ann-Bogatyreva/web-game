@@ -92,8 +92,55 @@ public function query($sql, $parameters = []) {
         return $this->pdo->lastInsertId();
     }
 
+
+    /**
+     * Обновляет запись в таблице
+     */
+    public function update($fields) {
+        $query = 'UPDATE `' . $this->table . '` SET ';
+        
+        foreach ($fields as $key => $value) {
+            $query .= '`' . $key . '` = :' . $key . ',';
+        }
+        
+        $query = rtrim($query, ',');
+        $query .= ' WHERE `' . $this->primaryKey . '` = :primaryKey';
+        
+        // Устанавливаем primary key параметр
+        $fields['primaryKey'] = $fields[$this->primaryKey];
+        
+        $this->query($query, $fields);
+    }
+
+    /**
+     * Удаляет запись из таблицы
+     */
+    public function delete($id) {
+        $parameters = [':id' => $id];
+        $this->query('DELETE FROM `' . $this->table . '` WHERE `' . $this->primaryKey . '` = :id', $parameters);
+    }
+
+    /**
+     * Удаляет все записи из таблицы
+     */
+    public function deleteAll() {
+        $this->query('DELETE FROM `' . $this->table . '`');
+    }
+
+    /**
+     * Подсчитывает количество записей в таблице
+     */
+    public function count() {
+        $query = $this->query('SELECT COUNT(*) FROM `' . $this->table . '`');
+        return $query->fetchColumn();
+    }
+}
+
+
 ?>
 
+
+    
     
 
 </body>
