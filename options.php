@@ -39,8 +39,7 @@ public function query($sql, $parameters = []) {
     }
 
     /**
-     * Получает все записи из таблицы
-     */
+    
     public function findAll($orderBy = null, $limit = null, $offset = null) {
         $query = 'SELECT * FROM `' . $this->table . '`';
         
@@ -58,6 +57,41 @@ public function query($sql, $parameters = []) {
         
         return $this->query($query)->fetchAll();
     }
+
+    /**
+     * Находим запись по первичному ключу
+     */
+    public function findById($value) {
+        $query = 'SELECT * FROM `' . $this->table . '` WHERE `' . $this->primaryKey . '` = :value';
+        $parameters = [':value' => $value];
+        $result = $this->query($query, $parameters)->fetch();
+        return $result;
+    }
+
+    /**
+     * Вставляем новую запись в таблицу
+     */
+    public function insert($fields) {
+        $query = 'INSERT INTO `' . $this->table . '` (';
+        
+        foreach ($fields as $key => $value) {
+            $query .= '`' . $key . '`,';
+        }
+        
+        $query = rtrim($query, ',');
+        $query .= ') VALUES (';
+        
+        foreach ($fields as $key => $value) {
+            $query .= ':' . $key . ',';
+        }
+        
+        $query = rtrim($query, ',');
+        $query .= ')';
+        
+        $this->query($query, $fields);
+        return $this->pdo->lastInsertId();
+    }
+
 ?>
 
     
