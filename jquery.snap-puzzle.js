@@ -8,3 +8,7 @@
 	License: http://www.opensource.org/licenses/mit-license.php
 
 */
+
+(function($){
+    $.fn.snapPuzzle = function(options){
+        var o = $.extend({ pile: '', containment: 'document', rows: 5, columns: 5, onComplete: function(){} }, options);
