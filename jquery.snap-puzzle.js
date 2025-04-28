@@ -10,7 +10,7 @@
 */
 
 (function($){
-    $.fn.snapPuzzle = function(options){
+     $.fn.snapPuzzle = function(options){
         var o = $.extend({ pile: '', containment: 'document', rows: 5, columns: 5, onComplete: function(){} }, options);
         // public methods
 
