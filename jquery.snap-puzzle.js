@@ -131,13 +131,13 @@ maxY = pile.height() - piece Height,
 
                 pieceWidth = that.width() / o.columns,
 
-                pieceHeight = that.height() / o.rows,
-
-                pile = $(o.pile).addClass('snappuzzle-pile'),
-
-                maxX = pile.width() - pieceWidth,
-
-                maxY = pile.height() - pieceHeight;
+                 pieceHeight = that.height() / o.rows,
+ 
+                 pile = $(o.pile).addClass('snappuzzle-pile'),
+ 
+                 maxX = pile.width() - pieceWidth,
+ 
+                 maxY = pile.height() - pieceHeight;
 
 
 
@@ -246,3 +246,15 @@ maxY = pile.height() - piece Height,
             }
 
 	    }
+
+	     return this.each(function(){
+
+            if (this.complete) init($(this));
+
+            else $(this).load(function(){ init($(this)); });
+
+        });
+
+    };
+
+}(jQuery));
