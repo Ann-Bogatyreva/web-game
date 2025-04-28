@@ -47,15 +47,15 @@ maxY = pile.height() - piece Height,
 
                         var x_y = $(this).data('pos').split('_'), x = x_y[0], y = x_y[1];
 
-                        $(this).css({
+                        $(this).css( {
 
                             width: pieceWidth,
 
-                            height: pieceHeight,
+                            height: pieceHeight, 
 
-                            left: y*pieceWidth,
+                            left: y*pieceWidth, 
 
-                            top: x*pieceHeight
+                            top: x*pieceHeight  
 
                         });
 
