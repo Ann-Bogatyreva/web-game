@@ -33,5 +33,47 @@ maxY = pile.height() - pieceHeight,
 
 
 
-                if (options
+                if (options == 'destroy') {
+
+                    $('.'+o.puzzle_class).remove();
+
+                    that.unwrap().removeData('options');
+
+                    pile.removeClass('snappuzzle-pile');
+
+                } else if (options == 'refresh') {
+
+                    $('.snappuzzle-slot.'+o.puzzle_class).each(function(){
+
+                        var x_y = $(this).data('pos').split('_'), x = x_y[0], y = x_y[1];
+
+                        $(this).css({
+
+                            width: pieceWidth,
+
+                            height: pieceHeight,
+
+                            left: y*pieceWidth,
+
+                            top: x*pieceHeight
+
+                        });
+
+                    });
+
+                    $('.snappuzzle-piece.'+o.puzzle_class).each(function(){
+
+                        if ($(this).data('slot')) {
+
+                            // placed on slot
+
+                            var x_y = $(this).data('slot').split('_'), slot_x = x_y[0], slot_y = x_y[1],
+
+                                x_y = $(this).data('pos').split('_'), pos_x = x_y[0], pos_y = x_y[1];;
+
+                            $(this).css({
+
+                                width: pieceWidth,
+
+                                height: pieceHeight, 
 			
