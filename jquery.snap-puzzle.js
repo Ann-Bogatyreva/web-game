@@ -76,4 +76,32 @@ maxY = pile.height() - piece Height,
                                 width: pieceWidth,
 
                                 height: pieceHeight, 
-			
+			left: slot_y*pieceWidth+puzzle_offset.left-pile_offset.left,
+
+                                top: slot_x*pieceHeight+puzzle_offset.top-pile_offset.top,
+
+                                backgroundPosition: (-pos_y*pieceWidth)+'px '+(-pos_x*pieceHeight)+'px',
+
+                                backgroundSize: that.width()
+
+                            });
+
+                        } else {
+
+                            // placed anywhere else
+
+                            var x_y = $(this).data('pos').split('_'), x = x_y[0], y = x_y[1];
+
+                            $(this).css({
+
+                                width: pieceWidth,
+
+                                height: pieceHeight,
+
+                                left: Math.floor((Math.random()*(maxX+1))),
+
+                                top: Math.floor((Math.random()*(maxY+1))),
+
+                                backgroundPosition: (-y*pieceWidth)+'px '+(-x*pieceHeight)+'px',
+
+                                backgroundSize: that.width()
