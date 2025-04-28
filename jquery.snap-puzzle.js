@@ -19,13 +19,13 @@
             this.each(function(){
 
                 var that = $(this),
-			
-o = that.data('options'),
+			 
+o = that.data('options'), 
                     pieceWidth = that.width() / o.columns,
                     pieceHeight = that.height() / o.rows,
-                    pile = $(o.pile),
-                    maxX = pile.width() - pieceWidth,
-maxY = pile.height() - pieceHeight,
+                    pile = $(o.pile), 
+                    maxX = pile.width() - pieceWidth, 
+maxY = pile.height() - piece Height, 
 
                     puzzle_offset = that.closest('span').offset(),
 
