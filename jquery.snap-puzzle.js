@@ -20,3 +20,10 @@
 
                 var that = $(this),
 			
+o = that.data('options'),
+                    pieceWidth = that.width() / o.columns,
+                    pieceHeight = that.height() / o.rows,
+                    pile = $(o.pile),
+                    maxX = pile.width() - pieceWidth,
+
+			
