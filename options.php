@@ -30,7 +30,35 @@ class DatabaseTable {
         $this->pdo = $pdo;
         $this->table = $table;
         $this->primaryKey = $primaryKey;
-    }>
+    }
+    
+public function query($sql, $parameters = []) {
+        $query = $this->pdo->prepare($sql);
+        $query->execute($parameters);
+        return $query;
+    }
+
+    /**
+     * Получает все записи из таблицы
+     */
+    public function findAll($orderBy = null, $limit = null, $offset = null) {
+        $query = 'SELECT * FROM `' . $this->table . '`';
+        
+        if ($orderBy != null) {
+            $query .= ' ORDER BY ' . $orderBy;
+        }
+        
+        if ($limit != null) {
+            $query .= ' LIMIT ' . $limit;
+        }
+        
+        if ($offset != null) {
+            $query .= ' OFFSET ' . $offset;
+        }
+        
+        return $this->query($query)->fetchAll();
+    }
+?>
 
     
 
