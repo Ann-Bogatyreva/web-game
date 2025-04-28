@@ -213,7 +213,7 @@ maxY = pile.height() - piece Height,
 
                             });
 
-                            if (!slot_pos) return false;
+                             if (!slot_pos) return false;
 
 
 
@@ -242,7 +242,6 @@ maxY = pile.height() - piece Height,
                     });
 
                 }
-
             }
 
 	    }
@@ -250,7 +249,6 @@ maxY = pile.height() - piece Height,
 	     return this.each(function(){
 
             if (this.complete) init($(this));
-
             else $(this).load(function(){ init($(this)); });
 
         });
