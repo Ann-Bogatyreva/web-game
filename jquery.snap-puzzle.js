@@ -147,7 +147,7 @@ maxY = pile.height() - piece Height,
 
 
 
-            for (var x=0; x<o.rows; x++) {
+            for  (var x=0; x<o.rows; x++) {
 
                 for (var y=0; y<o.columns; y++) {
 
@@ -167,11 +167,11 @@ maxY = pile.height() - piece Height,
 
                         backgroundImage: 'url('+src+')',
 
-                        backgroundPosition: (-y*pieceWidth)+'px '+(-x*pieceHeight)+'px',
-
-                        backgroundSize: that.width()
-
-                    }).draggable({
+                         backgroundPosition: (-y*pieceWidth)+'px '+(-x*pieceHeight)+'px',
+ 
+                         backgroundSize: that.width()
+ 
+                     }).draggable({
 
                         start: function(e, ui){ $(this).removeData('slot'); },
 
@@ -183,7 +183,7 @@ maxY = pile.height() - piece Height,
 
 
 
-                    $('<div class="snappuzzle-slot '+puzzle_class+'"/>').data('pos', x+'_'+y).css({
+                     $('<div class="snappuzzle-slot '+puzzle_class+'"/>').data('pos', x+'_'+y).css({
 
                         width: pieceWidth,
 
